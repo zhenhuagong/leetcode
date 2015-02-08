@@ -4,6 +4,15 @@ import java.util.List;
 
 public class Utils {
 
+    public static <T> void printArray(String prefix, T[] data, String seperator){
+        System.out.print(prefix + "\t");
+        for(int i = 0; i < data.length - 1; i++){
+            System.out.print(data[i].toString() + seperator);
+        }
+        System.out.print(data[data.length - 1].toString());
+        System.out.println("");
+    }
+    
     public static <T> void printList(String prefix, List<T> data, String seperator){
         System.out.print(prefix + "\t");
         for(T elem : data){
@@ -22,5 +31,11 @@ public class Utils {
             }
             System.out.println("");
         }
+    }
+    
+    public static void swap(Integer[] data, int m, int n){
+        int tmp = data[m];
+        data[m] = data[n];
+        data[n] = tmp;
     }
 }
