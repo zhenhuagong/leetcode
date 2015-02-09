@@ -43,7 +43,7 @@ public class SearchRange {
         // Keep divide by 2 until two elements left
         // where the left target is
         int left = 0, right = data.length - 1;
-        while(left < right - 1){
+        while(left < right - 1){    // Important! make sure each time when we calculate mid, the result won't be data[left] or data[right]
             int mid = left + (right - left) / 2;
             if(target == data[mid]){
                 right = mid;

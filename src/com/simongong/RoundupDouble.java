@@ -25,5 +25,9 @@ public class RoundupDouble {
         System.out.println(compare1 >= 0.0d);
         System.out.println(compare2 >= 0.0d);
         System.out.println(compare3 <= 0.0d);
+        
+        System.out.println(Math.abs(Integer.MIN_VALUE));
+        System.out.println(Math.abs((long)Integer.MIN_VALUE));
+        System.out.println(Math.abs(Integer.MAX_VALUE));
     }
 }
