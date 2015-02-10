@@ -4,7 +4,7 @@ package com.simongong;
 Divide two integers without using multiplication, division and mod operator.
 
 思路：
-基本思想是不断地减掉除数，直到为0为止。但是这样会太慢。
+基本思想是用减法实现除法，不断地减掉除数，直到为0为止。但是这样会太慢。
 由于目标是把被除数减到除数的(1,2)倍，可以用2分法来加速这个减的过程。不断对除数*2，用位运算实现，直到它比被除数还大为止。
 加倍的同时，也记录下count，将被除数减掉加倍后的值，并且结果+count。
 注意点：
