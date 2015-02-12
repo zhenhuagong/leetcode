@@ -1,4 +1,4 @@
-package com.simongong.tree;
+package com.simongong.extendedtype;
 
 public class TreeNode {
     public int val;

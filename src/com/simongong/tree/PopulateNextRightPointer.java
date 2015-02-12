@@ -1,5 +1,7 @@
 package com.simongong.tree;
 
+import com.simongong.extendedtype.TreeLinkNode;
+
 /*
  * Given a binary tree
 
