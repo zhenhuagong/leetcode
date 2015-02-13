@@ -31,3 +31,6 @@
 26. [Trapping Rain Water](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/TrappingRainWater.java)
 27. [Valid Number](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/ValidNumber.java)
 28. [Anagrams](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/Anagrams.java)
+29. [Convert Sorted List to Binary Search Tree](https://github.com/zhenhuagong/leetcode/blob/78bded4a02fb9499a11a4a1cf87f3d5354eb5fbb/src/com/simongong/tree/ConvertSortedListToBinarySearchTree.java)
+30. [Longest Common Prefix](https://github.com/zhenhuagong/leetcode/blob/78bded4a02fb9499a11a4a1cf87f3d5354eb5fbb/src/com/simongong/tree/LongestCommonPrefix.java)
+31. [Restore IP Addresses](https://github.com/zhenhuagong/leetcode/blob/78bded4a02fb9499a11a4a1cf87f3d5354eb5fbb/src/com/simongong/tree/RestoreIPAddresses.java)

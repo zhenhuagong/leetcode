@@ -14,11 +14,18 @@ public class Utils {
     }
     
     public static <T> void printList(String prefix, List<T> data, String seperator){
-        System.out.print(prefix + "\t");
-        for(T elem : data){
-            System.out.print(elem.toString() + seperator);
+        StringBuilder sb = new StringBuilder();
+        sb.append(prefix + "\t");
+        if(data != null && data.size() > 0){
+            for(T elem : data){
+                sb.append(elem.toString());
+                sb.append(seperator);
+            }
+            sb.delete(sb.length() - seperator.length(), sb.length());
+        }else{
+            sb.append("No data");
         }
-        System.out.println("");
+        System.out.println(sb.toString());
     }
     
     public static <T> void printMatrix(String prefix, T[][] matrix){
