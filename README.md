@@ -34,3 +34,8 @@
 29. [Convert Sorted List to Binary Search Tree](https://github.com/zhenhuagong/leetcode/blob/78bded4a02fb9499a11a4a1cf87f3d5354eb5fbb/src/com/simongong/tree/ConvertSortedListToBinarySearchTree.java)
 30. [Longest Common Prefix](https://github.com/zhenhuagong/leetcode/blob/78bded4a02fb9499a11a4a1cf87f3d5354eb5fbb/src/com/simongong/tree/LongestCommonPrefix.java)
 31. [Restore IP Addresses](https://github.com/zhenhuagong/leetcode/blob/78bded4a02fb9499a11a4a1cf87f3d5354eb5fbb/src/com/simongong/tree/RestoreIPAddresses.java)
+32. [Maximal Rectangle](https://github.com/zhenhuagong/leetcode/blob/43595c9a6dba91c54f39e6d12b59621b438c59d3/src/com/simongong/MaximalRectangle.java)
+33. [LRU Cache](https://github.com/zhenhuagong/leetcode/blob/43595c9a6dba91c54f39e6d12b59621b438c59d3/src/com/simongong/extendedtype/LRUCache.java)
+34. [Min Stack](https://github.com/zhenhuagong/leetcode/blob/43595c9a6dba91c54f39e6d12b59621b438c59d3/src/com/simongong/extendedtype/MinStackTest.java)
+35. [Decode Ways](https://github.com/zhenhuagong/leetcode/blob/0943152047bdd91e73bb88f258659271a2832983/src/com/simongong/DecodeWays.java)
+36. [Wildcard Matching](https://github.com/zhenhuagong/leetcode/blob/0943152047bdd91e73bb88f258659271a2832983/src/com/simongong/WildcardMatching.java)
