@@ -39,3 +39,4 @@
 34. [Min Stack](https://github.com/zhenhuagong/leetcode/blob/43595c9a6dba91c54f39e6d12b59621b438c59d3/src/com/simongong/extendedtype/MinStackTest.java)
 35. [Decode Ways](https://github.com/zhenhuagong/leetcode/blob/0943152047bdd91e73bb88f258659271a2832983/src/com/simongong/DecodeWays.java)
 36. [Wildcard Matching](https://github.com/zhenhuagong/leetcode/blob/0943152047bdd91e73bb88f258659271a2832983/src/com/simongong/WildcardMatching.java)
+37. [Multiply Strings](https://github.com/zhenhuagong/leetcode/blob/0943152047bdd91e73bb88f258659271a2832983/src/com/simongong/MultiplyStrings.java)
