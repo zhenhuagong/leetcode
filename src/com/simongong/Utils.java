@@ -15,7 +15,7 @@ public class Utils {
     
     public static <T> void printList(String prefix, List<T> data, String seperator){
         StringBuilder sb = new StringBuilder();
-        sb.append(prefix + "\t");
+        sb.append(prefix + "\t\n");
         if(data != null && data.size() > 0){
             for(T elem : data){
                 sb.append(elem.toString());
