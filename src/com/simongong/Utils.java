@@ -4,6 +4,20 @@ import java.util.List;
 
 public class Utils {
 
+    public static <T> String arrayStringfy(T[] data, String seperator){
+        if(data == null || data.length == 0){
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < data.length; i++){
+            sb.append(data[i].toString());
+            if(i != data.length - 1){
+                sb.append(seperator);
+            }
+        }
+        return sb.toString();
+    }
+    
     public static <T> void printArray(String prefix, T[] data, String seperator){
         System.out.print(prefix + "\t");
         for(int i = 0; i < data.length - 1; i++){
