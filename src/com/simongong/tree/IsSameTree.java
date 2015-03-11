@@ -1,4 +1,4 @@
-package com.simongong;
+package com.simongong.tree;
 
 import java.util.Stack;
 
