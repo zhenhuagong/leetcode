@@ -56,3 +56,8 @@
 51. [Reverse Words in a String](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/ReverseWordsInAString.java)
 52. [Combinations](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/Combinations.java)
 53. [Permutations](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/Permutations.java)
+54. [Permutations II](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/PermutationsII.java)
+55. [Letter Combinations of a Phone Number](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/LetterCombinationsOfAPhoneNumber.java)
+56. [Combination Sum](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/CombinationSum.java)
+56. [Combination SumII](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/CombinationSumII.java)
+57. [isSameTree1](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/IsSameTree.java)

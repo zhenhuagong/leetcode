@@ -18,10 +18,9 @@ A solution set is:
 [2, 2, 3] 
 
 思路：
-1. 由于candidates是递增的，因此使用两头夹来相加。从右侧扫的便利为最外层
-2. 先找右边的数，如果candidate[i]能被target求余，则先求余remaining
-3. 对于candidate[i]，需要尝试找target/candidate[i] 次解
-3. 从左侧找减去target*m后的余数，也要判断candidate[j]%remaining求余。一直到candidate[j] > remaining || candidate[j] > target - candidate[i]为止。
+求和问题，为了简化，先把candidates排序。
+类似于combination问题，也是用DFS，不同的是递归起点： 由于candidates是递增的了，下一个取值只能是i本身或是i的下一个。
+
  */
 public class CombinationSum {
 
