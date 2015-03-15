@@ -75,3 +75,4 @@
 69. [Insertion Sort List](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/InsertionSortList.java)
 70. [Linked List Cycle II](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/LinkedListCycleII.java)
 71. [Find first K frequency numbers](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/FindFirstKFrequencyNumbers.java)
+71. [Edit Distance](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/EditDistance.java)
