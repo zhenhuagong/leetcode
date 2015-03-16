@@ -19,8 +19,10 @@ If n = 4 and k = 2, a solution is:
 
 求C(k, n)。
 思路:
-组合是无序的，因此要丢弃已经扫过的初始位置节点。实现上就是每次dfs的时候candidates和start是变化的，dfs(n, k-1, i+1, selected, results);
-使用DFS，递归函数为combine(int n, int k, int start, int[] selected, List<List<Integer>> results)。 当k == 0时，返回selected。
+DFS.组合是无序的，因此要丢弃已经扫过的初始位置节点。
+实现上就是每次dfs的时候candidates和start是变化的，dfs(n, k-1, i+1, selected, results);
+递归函数为combine(int n, int k, int start, int[] selected, List<List<Integer>> results)
+当k == 0时，返回selected。
 
  */
 public class Combinations {

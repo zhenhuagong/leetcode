@@ -35,6 +35,7 @@ public class MaximalRectangle {
         }
         
         int top = 0, right = data[0].length - 1, bottom = data.length - 1, left = 0;
+        // initialize these results with boarder value
         int minLeft = data[0].length - 1, maxRight = 0, minTop = data.length - 1, maxBottom = 0;
         while(left < right && top < bottom){
             for(int i = 0; i < data[0].length; i++){  // scan top row

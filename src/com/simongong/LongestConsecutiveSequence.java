@@ -39,6 +39,7 @@ public class LongestConsecutiveSequence {
         
         int maxConsecutive = 0;
         for(int i : data){
+            // we should use remove() here to avoid unnecessary check
             if(dataSet.remove(i)){  // i could have been removed beforehand
                 int tmpConsecutive = 1;
                 int tmpNeighbor = i - 1;

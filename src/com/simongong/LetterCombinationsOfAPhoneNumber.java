@@ -36,7 +36,7 @@ public class LetterCombinationsOfAPhoneNumber {
     }
     
     public static void dfs(String numbers, int index, ArrayList<Character> selected, ArrayList<ArrayList<Character>> results){
-        if(selected.size() == numbers.length()){
+        if(selected.size() == numbers.length()){    // here we check if index if reach to the end
             results.add(new ArrayList<Character>(selected));
             return;
         }

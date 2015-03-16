@@ -13,9 +13,16 @@ Given n points on a 2D plane, find the maximum number of points that lie on the 
 因此，从给定的点出发比较划算。采用雷达式的扫描，从一个点point[i]出发，扫描其它的点，并计算point[i]与其它点的斜率，同时判断重合点，都计入相同斜率的点的个数，得到包含点数最多的那个斜率。
 使用一个map来保存遍历结果：<Double, Integer> - <k, pointTotal>
 
+测试用例边界值：
+1. 包含Y轴斜率的线
+2. 包含重复点
+3. 只有重复点
+
 注意:
-1. 每次换一个点计算时，map要重建。因为即使k相同，只代表这两条线是平行的，不代表会是同一条线。
+1. 重要！每次换一个点计算时，map要重建。因为即使k相同，只代表这两条线是平行的，不代表会是同一条线。
 2. 对于之前已经计算过的点，内层扫描是可以忽略。也就是j的初始值是i。
+
+注意程序中标注的NOTE，这个程序要bug free不容易。
  */
 public class MaxPointsOnLine {
 
@@ -34,14 +41,14 @@ public class MaxPointsOnLine {
             HashMap<Double, Integer> kMap = new HashMap<Double, Integer>();
             int duplicate = 0;
             for (int j = i; j < points.length; j++) {
-                // first, check if it's another duplicate
+                // NOTE1: first, check if it's another duplicate
                 if (points[j].x == points[i].x && points[j].y == points[i].y) {
                     duplicate++;
                     continue;
                 }
-                double k = Double.MAX_VALUE;    // initialize slope as MAX_VALUE
-                if (points[j].x != points[i].x) {   // not in a vertical direction
-                    // a float value in Java could be minus zero -0.0
+                double k = Double.MAX_VALUE;    // NOTE2: initialize slope as MAX_VALUE
+                if (points[j].x != points[i].x) {   // NOTE3: not in a vertical direction
+                    // NOTE4: a float value in Java could be minus zero -0.0
                     // we can get around the problem by adding 0
                     // see: http://stackoverflow.com/questions/6724031/how-can-a-primitive-float-value-be-0-0-what-does-that-mean
                     k = 0 + (double)(points[j].y - points[i].y) / (double)(points[j].x - points[i].x);
@@ -52,6 +59,7 @@ public class MaxPointsOnLine {
                     kMap.put(k, 1);
                 }
             }
+            //NOTE5: the input points could be a set of duplicate points
             max = Math.max(max, duplicate);
             for(int n: kMap.values()){
                 max = Math.max(max, n + duplicate);

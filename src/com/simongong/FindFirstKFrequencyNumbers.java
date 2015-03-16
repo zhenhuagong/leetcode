@@ -37,6 +37,7 @@ public class FindFirstKFrequencyNumbers {
             }
         }
         
+        // PriorityQueue is an implementation of big/small heap
         PriorityQueue<Entry<Integer, Integer>> queue = new PriorityQueue<>(k+1, new Comparator<Entry<Integer, Integer>>() {
             @Override
             public int compare(Entry<Integer, Integer> o1,
@@ -45,10 +46,12 @@ public class FindFirstKFrequencyNumbers {
             }
         });
         
+        // Use entrySets() to iterate a map
         for(Entry<Integer, Integer> entry: frequency.entrySet()){
             if (queue.size() == k + 1) {    // poll the one with currently lowest frequency
                 queue.poll();
             }
+            // push an entry into heap
             queue.offer(entry);
         }
         

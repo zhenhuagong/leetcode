@@ -1,19 +1,29 @@
 package com.simongong;
 
 /*
-Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). 
+Given n non-negative integers a1, a2, ..., an,
+where each represents a point at coordinate (i, ai). 
 n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). 
-Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Find two lines, which together with x-axis forms a container,
+such that the container contains the most water.
 
 Note: You may not slant the container.
 
 思路：
+优化寻找可能的更大容量的路径，根据木桶原理，下一个可能的更大的容量就是提高最短的bar。
+因此，我们从两头扫，每次比较左右bar，计算当前容量，看是否能更新max。
+下一步就是改变当前两个bar中较小的那个，再次尝试是否能更新max。
+
+正确性证明：
+由于水的容量是由较小的那个边界决定的，因此某次迭代中，
+假设height[i] < height[j]，那么j减小肯定不会使水的容量增大，只有i增加才有可能使水的容量增大。
+但是会不会有这种可能：当前的i和某个k(k > j)是最大容量?
+这也是不可能的，因为按照我们的移动规则，既然右指针从k移动到了j，
+说明i的左边一定存在一个边界m，使[m, k]的容量肯定大于[i, k]，所以[i,k]不可能是最大容量。
+
+实现上：
 1. 两个指针left, right，夹逼。当left < right时，left右移。反之right左移。
 2. 维护3个变量： maxVolumn, maxLeft, maxRight。
-正确性证明：
-由于水的容量是有较小的那个边界决定的，因此某次迭代中，假设height[i] < height[j]，那么j 减小肯定不会使水的容量增大，只有i增加才有可能使水的容量增大。
-但是会不会有这种可能：当前的i和 某个k (k > j)是最大容量?
-这也是不可能的，因为按照我们的移动规则，既然右指针从k移动到了j，说明i的左边一定存在一个边界 m，使[m, k]的容量肯定大于[i, k]，所以[i,k]不可能是最大容量。
 
  */
 public class ContainerWithMostWater {

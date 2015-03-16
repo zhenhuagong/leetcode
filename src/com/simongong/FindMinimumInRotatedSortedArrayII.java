@@ -13,6 +13,8 @@ Find the minimum element.
 
 The array may contain duplicates.
 
+难
+
 思路：
 跟原版问题的处理一样，采用二分查找。 
 差别在于，在while循环中，增加一个条件判断，即对data[mid] == data[left] || data[mid] == data[right]的处理
@@ -44,11 +46,11 @@ public class FindMinimumInRotatedSortedArrayII {
                 return data[left];
             }
             int mid = left + (right - left) / 2;
-            if(data[mid] > data[left]){
+            if(data[mid] > data[left]){ // left is sorted, drop it
                 left = mid;
-            }else if(data[mid] < data[right]){
+            }else if(data[mid] < data[right]){  // right is sorted, drop it
                 right = mid;
-            }else{
+            }else{  // neither left nor right is sorted, increment left
                 left++;
             }
         }

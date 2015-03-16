@@ -33,7 +33,7 @@ public class JumpGame {
         int currentMaxReachTo = 0;
         for(int i = 0; i < data.length; i++){
             currentMaxReachTo = Math.max(currentMaxReachTo, i + data[i]);
-            if(currentMaxReachTo == data.length - 1){
+            if(currentMaxReachTo >= data.length - 1){
                 return true;
             }
             if(currentMaxReachTo == i){

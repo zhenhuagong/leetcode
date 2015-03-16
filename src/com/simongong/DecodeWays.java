@@ -15,12 +15,14 @@ Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
 The number of ways decoding "12" is 2.
 
 思路：
-用DP的思路。
-1. D[i] 表示前i个字符能解的方法。
-2. D[i] 有2种解法：
- 1）. 最后一个字符单独解码。 如果可以解码，则解法中可以加上D[i - 1]
- 2）. 最后一个字符与上一个字符一起解码。 如果可以解码，则解法中可以加上D[i - 2]
- 以上2种分别判断一下1个，或是2个是不是合法的解码即可。
+跟跳台阶是同样的模型，下一步解码一位，或者下一步解码两位。
+用DP来处理，定义状态转移函数D[i]表示前i个字符能解的方法。
+D[i]有2种解法：
+ 1) 最后一个字符单独解码。 如果可以解码，则解法中可以加上D[i - 1]
+ 2) 最后一个字符与上一个字符一起解码。 如果可以解码，则解法中可以加上D[i - 2]
+以上2种分别判断一下1个，或是2个是不是合法的解码即可。
+初值D[0]=1，表示一位数字只有一种解码方式。
+最后得到D[len]即为结果。
  */
 public class DecodeWays {
 
@@ -46,7 +48,7 @@ public class DecodeWays {
                 if(i >= 2 && isValid(cipher.substring(i-2, i))){
                     resultSets[i] += resultSets[i - 2];
                 }
-                if(cipher.charAt(i - 1) != '0'){
+                if(cipher.charAt(i - 1) != '0'){    // don't forget the invalid code
                     resultSets[i] += resultSets[i - 1];
                 }
             }

@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /*
-Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
+Given a set of candidate numbers (C) and a target number (T),
+find all unique combinations in C where the candidate numbers sums to T.
 The same repeated number may be chosen from C unlimited number of times.
 
 Note:
@@ -18,8 +19,8 @@ A solution set is:
 [2, 2, 3] 
 
 思路：
-求和问题，为了简化，先把candidates排序。
-类似于combination问题，也是用DFS，不同的是递归起点： 由于candidates是递增的了，下一个取值只能是i本身或是i的下一个。
+求和问题，为了简化，先把candidates排序，这样方便执行DFS（提高了剪枝的效率）。
+类似于combination问题，也是用DFS，不同的是递归起点： 由于candidates是递增的了，下一个取值可以是i本身或是i的下一个。
 
  */
 public class CombinationSum {

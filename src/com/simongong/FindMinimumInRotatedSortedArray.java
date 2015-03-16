@@ -12,7 +12,17 @@ You may assume no duplicate exists in the array.
 
 解析：
 描述中的数组就相当是分块有序的数组，寻找最小元素。
-一维数组的查找，首先尝试复杂度为O(lgN)的算法，二分。重点在实现二分查找时，是否完整，对边界条件的处理是否健壮。（参考编程之美3.11节）
+一维数组的查找，首先尝试复杂度为O(lgN)的算法，二分。
+因为是升序序列，因此每次mid跟right比较。
+当mid比右边大的时候，右边结构为[mid,...max,min,...,right]。最小元素肯定在右边，[left,mid-1]就可以丢弃了
+反之，最小元素肯定在左边，[mid+1, right]就可以丢弃了
+
+如果先判断[left, right]是否已经有序，否则判断left与mid的关系，丢掉已经排序的那边。
+left > mid，右边是升序，丢弃
+left < mid，左边是升序，丢弃
+
+实现：
+重点是在二分查找时，是否完整，对边界条件的处理是否健壮。（参考编程之美3.11节）
 1. 二分查找模板（简洁）
 2. 二分查找基础上，增加while中的判断（略繁，但思路直观，可以接受）
 3. 预先判断是否sorted，再使用二分查找（思路清晰，程序简洁，推荐）
@@ -38,7 +48,7 @@ public class FindMinimumInRotatedSortedArray {
     // As always, use divide-by-2 template to avoid complicated boundary cases hanlding
     // 1. while(left < right -1){ int mid = left + (right - left) / 2;}
     // 2. if(data[mid] > data[left]){ left = mid; } else { right = mid; }
-    // finally, compare the remaining data[]left] and data[right] to get your desired result
+    // finally, compare the remaining data[left]] and data[right] to get your desired result
     public static int findMinimimDivideTemplate(int[] data){
         if(data == null || data.length == 0){
             return 0;

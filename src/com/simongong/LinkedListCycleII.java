@@ -34,7 +34,7 @@ public class LinkedListCycleII {
                 break;
             }
         }
-        if (p2.next != null && p2.next.next != null) {
+        if (!(p2.next != null && p2.next.next != null)) {   // p2 reach the end, no cycle
             return null;
         }
         

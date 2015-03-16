@@ -38,7 +38,14 @@ public class EvaluateReversePolishNotation {
             String cur = notation[i];
             if (cur.equals("+") || cur.equals("-") || cur.equals("*") || cur.equals("/")) {
                 // pop two operants
+                // check if there is operant available
+                if (operants.isEmpty()) {
+                    break;
+                }
                 int operant1 = operants.pop();
+                if (operants.isEmpty()) {
+                    break;
+                }
                 int operant2 = operants.pop();
                 switch (cur.charAt(0)) {
                     case '+':

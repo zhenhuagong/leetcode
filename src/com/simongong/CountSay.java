@@ -18,6 +18,8 @@ Note: The sequence of integers will be represented as a string.
 2 - 21 (one 2, one 1)
 3 - 1211 (one 1, one 2, two 1)
 4 - 111221
+因此，这是一个递归：f(n) = countSay(f(n-1))
+其中f(1) = 1
  */
 public class CountSay {
 
@@ -73,6 +75,8 @@ public class CountSay {
         int len = s.length(), count = 0;
         for(int i = 0; i < len; i++){
             count++;
+            // a trick here: compare i with i+1 so we can break counting asap
+            // this also can avoid trivial handling at head and tail
             if(i == len - 1 || (i < len - 1 && s.charAt(i) != s.charAt(i + 1))){
                 sb.append(count);
                 sb.append(s.charAt(i));

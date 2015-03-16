@@ -14,7 +14,6 @@ return 1->2->2->4->3->5.
 思路：
 扫描原序列，记录成两条子序列，需要保存各自的头尾节点，因此需要四个指针。再外加一个扫描指针。
 一路扫，一路更新小序列尾指针或大序列尾指针。
-注意在两个头指针next域初始化的时候，只初始化小序列，不初始化大序列。
 cur扫完原始链表之后，就划分好了。然后把小序列的尾节点与大序列的头结点连起来。
 
  */
@@ -29,14 +28,14 @@ public class PartitionList {
             return null;
         }
         ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode smallTail = dummy, cur = head;   // pre points to the last element of smaller sequence and cur points to the next unscanned big
+        ListNode smallTail = dummy, cur = head;
+        smallTail.next = cur;
         
         ListNode bigDummy = new ListNode(0);
         ListNode bigTail = bigDummy;
         
         while(cur != null){
-            if (cur.val >= x) {
+            if (cur.val >= x) { // break big nodes and link them to big list
                 smallTail.next = cur.next;
                 
                 bigTail.next = cur;
