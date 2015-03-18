@@ -16,14 +16,14 @@ public class BalancedBinaryTree {
         if (root == null) {
             return true;
         }
-        
+
         boolean cut = false;
         if (root.left == null || root.right == null) {
             cut = true;
         }
         return isBalanced(root.left) && isBalanced(root.right) && Math.abs(getDepth(root.left, cut) - getDepth(root.right, cut)) <= 1;
     }
-    
+
     private int getDepth(TreeNode root, boolean cut){
         if (root == null) {
             return -1;
@@ -32,7 +32,33 @@ public class BalancedBinaryTree {
             // early return
             return 2;
         }
-        
+
         return 1 + Math.max(getDepth(root.left, false), getDepth(root.right, false));
+    }
+
+    public boolean isBalancedRaw(TreeNode root){
+        if (getDepthRaw(root) == -1) {
+            return false;
+        }else{
+            return true;
+        }
+    }
+    // return value -1 means root is not balanced
+    private int getDepthRaw(TreeNode root){
+        if (root == null) {
+            return 0;
+        }
+
+        int left = getDepthRaw(root.left);
+        int right = getDepthRaw(root.right);
+        if (left == -1 || right == -1) {
+            return -1
+        }else{
+            if (Math.abs(left - right) > 1) {
+                return -1;
+            }else{
+                return Math.max(left, right) + 1;
+            }
+        }
     }
 }
