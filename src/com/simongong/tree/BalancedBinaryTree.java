@@ -52,7 +52,7 @@ public class BalancedBinaryTree {
         int left = getDepthRaw(root.left);
         int right = getDepthRaw(root.right);
         if (left == -1 || right == -1) {
-            return -1
+            return -1;
         }else{
             if (Math.abs(left - right) > 1) {
                 return -1;

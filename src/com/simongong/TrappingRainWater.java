@@ -9,7 +9,7 @@ Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
 In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
 
 思路：
-1. 看上去是求一个个子区间内的蓄水量然后求和，但每个子区间的划分和区间内的蓄水量求值都比较繁琐。
+1. 看上去是求一个个子区间内的蓄水量然后求和，但每个子区间的划分和区间内的蓄水量求值都比较繁琐。   
 可以化繁求简，看到其实存储的水都是在墙顶的，类似于我们是在修补木桶的边。而能修补多少，取决于左右墙顶的。
 因此，对于某条墙data[i]，我们需要求出
 i. 从左边到data[i]最高的墙left

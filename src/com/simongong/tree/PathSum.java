@@ -1,4 +1,6 @@
-package com.simongong;
+package com.simongong.tree;
+
+import com.simongong.extendedtype.TreeNode;
 
 /*
 Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
@@ -22,7 +24,7 @@ public class PathSum {
 
     public boolean hasPath(TreeNode root, int sum){
         if (root == null) {
-            return false
+            return false;
         }
         // check at leaf node
         if (root.left == null && root.right == null && sum == root.val) {

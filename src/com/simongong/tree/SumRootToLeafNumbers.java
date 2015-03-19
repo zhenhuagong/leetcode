@@ -1,4 +1,6 @@
-package com.simongong;
+package com.simongong.tree;
+
+import com.simongong.extendedtype.TreeNode;
 
 /*
 Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
@@ -28,8 +30,7 @@ public class SumRootToLeafNumbers {
         if (root == null) {
             return 0;
         }
-        dfs(root, 0);
-
+        return dfs(root, 0);
     }
     private int dfs(TreeNode root, int preSum){
         if (root == null) {

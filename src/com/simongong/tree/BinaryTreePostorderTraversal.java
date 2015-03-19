@@ -21,6 +21,7 @@ return [3,2,1].
 
 注意：
 进栈顺序。先不断的推左子节点，然后弹出栈顶元素看起是否已被访问。是就添加到result，否则推进栈，并推进其右子节点。
+因此需要两个额外的栈空间。
 
  */
 public class BinaryTreePostorderTraversal {
