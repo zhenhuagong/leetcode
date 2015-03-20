@@ -1,5 +1,6 @@
 package com.simongong.tree;
 
+import com.simongong.extendedtype.DTreeNode;
 import com.simongong.extendedtype.TreeNode;
 
 /*
@@ -76,5 +77,52 @@ public class LowestCommonAncestor {
         }else{
             return null;
         }
+    }
+    
+    public DTreeNode findLCAWithParent(DTreeNode root, DTreeNode a, DTreeNode b){
+        if(root == null){
+            return null;
+        }
+        
+        // height in tree equals length in list
+        int hA = getHeight(a);
+        int hB = getHeight(b);
+        
+        // make sure hB is deeper
+        if(hA > hB){
+            swap(a, b);
+            hA = hA + hB;
+            hB = hA - hB;
+            hA = hA - hB;
+        }
+        
+        int diff = hB - hA;
+        for(int i = 0; i < diff; i++){
+            b = b.parent;
+        }
+        
+        while(a != null && b != null){
+            if(a == b){
+                return a;
+            }
+            a = a.parent;
+            b = b.parent;
+        }
+        return null;
+    }
+    
+    private int getHeight(DTreeNode node){
+        int height = 0;
+        while(node != null){
+            height++;
+            node = node.parent;
+        }
+        return height;
+    }
+    
+    private void swap(DTreeNode a, DTreeNode b){
+        DTreeNode tmp = a;
+        a = b;
+        b = tmp;
     }
 }

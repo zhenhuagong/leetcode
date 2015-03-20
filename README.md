@@ -1,6 +1,8 @@
 ##Leetcode
 [Leetcode Online Judge](https://oj.leetcode.com/problemset/algorithms/)
 
+[Problem List](https://github.com/zhenhuagong/leetcode/blob/master/ProblemList.md)
+
 ##Cracked
 
 1. [Reverse Nodes in k-GroupGiven a linked list]
@@ -90,6 +92,10 @@
 85. [Pow(x, n)](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/Pow.java)
 86. [Majority Number](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/MajorityNumber.java)
 87. [Majority Number II](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/MajorityNumberII.java)
-88. [Implement Queue by Stacks](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/QueueByStack.java)
+88. [Implement Queue by Stacks](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/extendedtype/QueueByStack.java)
 89. [Interleaving Positive and Negative Numbers](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/InterleavingPositiveAndNegativeNumbers.java)
 90. [Sort Colors II](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/SortColorsII.java)
+91. [Gas Station](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/GasStation.java)
+92. [Convert Sorted Array to Binary Search Tree](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/ConvertSortedArrayToBinarySearchTree.java)
+93. [Binary Tree Level Order Traversal](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/BinaryTreeLevelOrderTraversal.java)
+94. [Flatten Binary Tree to Linked List](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/FlattenBinaryTreeToLinkedList.java)
