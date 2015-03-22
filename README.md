@@ -99,3 +99,6 @@
 92. [Convert Sorted Array to Binary Search Tree](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/ConvertSortedArrayToBinarySearchTree.java)
 93. [Binary Tree Level Order Traversal](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/BinaryTreeLevelOrderTraversal.java)
 94. [Flatten Binary Tree to Linked List](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/tree/FlattenBinaryTreeToLinkedList.java)
+95. [Remove Duplicates from Sorted List II](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/RemoveDuplicatesFromSortedListII.java)
+96. [Longest Substring Without Repeating Characters](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/LongestSubstringWithoutRepeatingCharacters.java)
+97. [Longest Palindromic Substring](https://github.com/zhenhuagong/leetcode/blob/master/src/com/simongong/LongestPalindromicSubstring.java)
